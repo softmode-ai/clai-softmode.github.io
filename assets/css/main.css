@@ -337,6 +337,69 @@ a.featured-name:hover { text-decoration: underline; }
 
 .cta--full { display: block; width: 100%; text-align: center; padding: 1.5rem 2rem; }
 
+/* ── EXPERIMENTS ── */
+#s-experiments h2 { max-width: 100%; }
+
+.experiments-img {
+  border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+}
+
+.experiments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.experiment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  border: 1.5px solid var(--ink);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.experiment-card:hover {
+  border-color: #b0a898;
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.experiment-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.experiment-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.experiment-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.experiment-cta {
+  font-size: var(--size-nav);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: auto;
+  transition: color 0.15s;
+}
+
+.experiment-card:hover .experiment-cta { color: var(--ink); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   :root { --pad: 1.25rem; }
